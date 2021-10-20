@@ -12,9 +12,10 @@ class Settings extends Phaser.Scene {
 		this.buttonBack.y = -this.buttonBack.height-20;
 		this.tweens.add({targets: this.buttonBack, y: 20, duration: 500, ease: 'Back'});
 
-		var fontTitle = { font: '46px '+EPT.text['FONT'], fill: '#ffde00', stroke: '#000', strokeThickness: 7, align: 'center' };
-		var fontSubtitle = { font: '38px '+EPT.text['FONT'], fill: '#ffde00', stroke: '#000', strokeThickness: 5, align: 'center' };
-		var fontSmall = { font: '28px '+EPT.text['FONT'], fill: '#ffde00', stroke: '#000', strokeThickness: 4, align: 'center' };
+		var fontTitle = { font: '30px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 7, align: 'center' };
+		// var fontSubtitle = { font: '28px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 5, align: 'center' };
+		var fontSubtitle = { font: '26px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 5, align: 'center' };
+		var fontSmall = { font: '18px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 4, align: 'center' };
 		var titleSettings = this.add.text(EPT.world.centerX, 60, EPT.text['settings'], fontTitle);
 		titleSettings.setOrigin(0.5, 0.5);
 		var offsetLeft = 130;
@@ -32,8 +33,8 @@ class Settings extends Phaser.Scene {
 		this.textCredits = this.add.text(offsetLeft+30+this.buttonCredits.width, 500, EPT.text['credits'], fontSubtitle);
 		this.textCredits.setOrigin(0, 0.5);		
 
-        this.bannerBeer = new Button(EPT.world.centerX, EPT.world.height-60, 'banner-beer', this.clickBeer, this, 'static');
-		this.bannerBeer.setOrigin(0.5, 1);
+        // this.bannerBeer = new Button(EPT.world.centerX, EPT.world.height-60, 'banner-beer', this.clickBeer, this, 'static');
+		// this.bannerBeer.setOrigin(0.5, 1);
 		
 		// if(document.monetization && document.monetization.state === 'started') {
 		// 	this.bannerBeer.destroy();
@@ -93,24 +94,22 @@ class Settings extends Phaser.Scene {
 		titleCreditsText.setOrigin(0.5,0);
 		var titleCreditsLogo = new Button(EPT.world.centerX, offsetTopCredits+270, 'logo-enclave', this.clickEnclave, this, 'noframes');
 		titleCreditsLogo.setOrigin(0.5,0);
-		var titleCreditsUrl = this.add.text(EPT.world.centerX, offsetTopCredits+400, 'enclavegames.com', fontSubtitle);
+		var titleCreditsUrl = this.add.text(EPT.world.centerX, offsetTopCredits+400, 'codemonkey.games', fontSubtitle);
 		titleCreditsUrl.setOrigin(0.5,0);
 		titleCreditsUrl.setInteractive({ useHandCursor: true });
 		titleCreditsUrl.on('pointerdown', function() { this.clickEnclave(); }, this);
 
 		var titleCrew = this.add.text(EPT.world.centerX, offsetTopCrew, EPT.text['team'], fontSubtitle);
 		titleCrew.setOrigin(0.5,0);
-		var titleCrewAndrzej = this.add.text(EPT.world.centerX, offsetTopCrew+80, 'Andrzej Mazur - '+EPT.text['coding'], fontSubtitle);
+		var titleCrewAndrzej = this.add.text(EPT.world.centerX, offsetTopCrew+80, 'Daniel Johnson - '+EPT.text['coding'], fontSubtitle);
 		titleCrewAndrzej.setOrigin(0.5,0);
-		var titleCrewEwa = this.add.text(EPT.world.centerX, offsetTopCrew+140, 'Ewa Mazur - '+EPT.text['design'], fontSubtitle);
-		titleCrewEwa.setOrigin(0.5,0);
-		var titleCrewKasia = this.add.text(EPT.world.centerX, offsetTopCrew+200, 'Kasia Mazur - '+EPT.text['testing'], fontSubtitle);
+		var titleCrewKasia = this.add.text(EPT.world.centerX, offsetTopCrew+200, 'Duane Voglio - '+EPT.text['testing'], fontSubtitle);
 		titleCrewKasia.setOrigin(0.5,0);
-		var titleCreditsMusic = this.add.text(EPT.world.centerX, offsetTopCrew+320, EPT.text['musicby']+' Bensound', fontSubtitle);
+		var titleCreditsMusic = this.add.text(EPT.world.centerX, offsetTopCrew+320, EPT.text['musicby']+' Mr Mixx', fontSubtitle);
 		titleCreditsMusic.setOrigin(0.5,0);
 
 		this.containerCredits.add([creditsBg,creditsBack,titleCredits,titleCreditsText,titleCreditsLogo,titleCreditsUrl]);
-		this.containerCredits.add([titleCrew,titleCrewAndrzej,titleCrewEwa,titleCrewKasia,titleCreditsMusic]);
+		this.containerCredits.add([titleCrew,titleCrewAndrzej,titleCrewKasia,titleCreditsMusic]);
 
 		this.containerKeyboard = this.add.container();
 		this.containerKeyboard.y = EPT.world.height;
@@ -267,6 +266,6 @@ class Settings extends Phaser.Scene {
 	}
 	clickEnclave() {
 		EPT.Sfx.play('click');
-		window.top.location.href = 'https://enclavegames.com/';
+		window.top.location.href = 'https://codemonkey.games/';
 	}
 };

@@ -29,6 +29,8 @@ var gameConfig = {
 		autoCenter: Phaser.Scale.CENTER_BOTH,
 		width: 640,
 		height: 960
+		// width: 360,
+		// height: 640
 	},
 	scene: [Boot, Preloader, MainMenu, Settings, Story, Game]
 }

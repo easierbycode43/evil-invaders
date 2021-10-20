@@ -51,7 +51,7 @@ var appShellFiles = [
   './img/button-tryagain.png',
   './img/clickme.png',
   './img/enclave-phaser-template.png',
-  './img/fork.png',
+  // './img/fork.png',
   './img/loading-background.png',
   './img/logo-enclave.png',
   './img/overlay.png',

@@ -224,7 +224,9 @@ EPT.Lang = {
   },
   text: {
     'en': {
-      'FONT': 'Berlin',
+      // 'FONT': 'Berlin',
+      'FONT': 'PressStart2P',
+      // PressStart2P
       'settings': 'SETTINGS',
       'sound-on': 'Sound: ON',
       'sound-off': 'Sound: OFF',
@@ -232,7 +234,7 @@ EPT.Lang = {
       'music-off': 'Music: OFF',
       'keyboard-info': 'Press K for keyboard shortcuts',
       'credits': 'CREDITS',
-      'madeby': 'EPT made by',
+      'madeby': '',
       'team': 'THE TEAM',
       'coding': 'coding',
       'design': 'design',

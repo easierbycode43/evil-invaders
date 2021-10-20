@@ -4,9 +4,10 @@ class Boot extends Phaser.Scene {
     }
     preload() {
         this.load.image('background', 'img/background.png');
-        this.load.image('logo-enclave', 'img/logo-enclave.png');
+        this.load.image('logo-enclave', 'img/logo-cmg-v2.png');
         this.load.image('loading-background', 'img/loading-background.png');
-        WebFont.load({ custom: { families: ['Berlin'], urls: ['fonts/BRLNSDB.css'] } });
+        // WebFont.load({ custom: { families: ['Berlin'], urls: ['fonts/BRLNSDB.css'] } });
+        WebFont.load({ custom: { families: ['PressStart2P'], urls: ['fonts/PressStart2P-Regular.css'] } });
     }
     create() {
         EPT.world = {

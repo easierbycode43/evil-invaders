@@ -28,7 +28,9 @@ class MainMenu extends Phaser.Scene {
         this.buttonStart = new Button(EPT.world.width-20, EPT.world.height-20, 'button-start', this.clickStart, this);
         this.buttonStart.setOrigin(1, 1);
 
-		var fontHighscore = { font: '38px '+EPT.text['FONT'], fill: '#ffde00', stroke: '#000', strokeThickness: 5 };
+		// var fontHighscore = { font: '38px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 5 };
+		var fontHighscore = { font: '24px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 5 };
+        console.log(EPT.text)
 		var textHighscore = this.add.text(EPT.world.width-30, 60, EPT.text['menu-highscore']+highscore, fontHighscore);
 		textHighscore.setOrigin(1, 0);
 
@@ -71,7 +73,7 @@ class MainMenu extends Phaser.Scene {
     }
     clickEnclave() {
         EPT.Sfx.play('click');
-        window.top.location.href = 'https://enclavegames.com/';
+        window.top.location.href = 'https://codemonkey.games';
     }
     clickSettings() {
         if(this.bgFilesLoaded) {

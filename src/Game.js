@@ -137,8 +137,8 @@ class Game extends Phaser.Scene {
 		this.buttonPause = new Button(20, 20, 'button-pause', this.managePause, this);
 		this.buttonPause.setOrigin(0,0);
 
-		var fontScore = { font: '38px '+EPT.text['FONT'], fill: '#ffde00', stroke: '#000', strokeThickness: 5 };
-		var fontScoreWhite =  { font: '38px '+EPT.text['FONT'], fill: '#000', stroke: '#ffde00', strokeThickness: 5 };
+		var fontScore = { font: '38px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 5 };
+		var fontScoreWhite =  { font: '38px '+EPT.text['FONT'], fill: '#000', stroke: '#facd00', strokeThickness: 5 };
 		this.textScore = this.add.text(EPT.world.width-30, 45, EPT.text['gameplay-score']+this._score, fontScore);
 		this.textScore.setOrigin(1,0);
 
@@ -154,7 +154,7 @@ class Game extends Phaser.Scene {
 		this.buttonPause.y = -this.buttonPause.height-20;
         this.tweens.add({targets: this.buttonPause, y: 20, duration: 500, ease: 'Back'});
 
-		var fontTitle = { font: '48px '+EPT.text['FONT'], fill: '#000', stroke: '#ffde00', strokeThickness: 10 };
+		var fontTitle = { font: '48px '+EPT.text['FONT'], fill: '#000', stroke: '#facd00', strokeThickness: 10 };
 
 		this.screenPausedGroup = this.add.group();
         this.screenPausedBg = this.add.sprite(0, 0, 'overlay');
@@ -197,7 +197,7 @@ class Game extends Phaser.Scene {
         
         var randX = Phaser.Math.Between(200, EPT.world.width-200);
         var randY = Phaser.Math.Between(200, EPT.world.height-200);
-		var pointsAdded = this.add.text(randX, randY, '+10', { font: '48px '+EPT.text['FONT'], fill: '#ffde00', stroke: '#000', strokeThickness: 10 });
+		var pointsAdded = this.add.text(randX, randY, '+10', { font: '48px '+EPT.text['FONT'], fill: '#facd00', stroke: '#000', strokeThickness: 10 });
 		pointsAdded.setOrigin(0.5, 0.5);
         this.tweens.add({targets: pointsAdded, alpha: 0, y: randY-50, duration: 1000, ease: 'Linear'});
 

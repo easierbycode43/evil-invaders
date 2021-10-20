@@ -12,7 +12,7 @@ class Preloader extends Phaser.Scene {
 		var progress = this.add.graphics();
 		this.load.on('progress', function (value) {
 			progress.clear();
-			progress.fillStyle(0xffde00, 1);
+			progress.fillStyle(0xfacd00, 1);
 			progress.fillRect(loadingBg.x-(loadingBg.width*0.5)+20, loadingBg.y-(loadingBg.height*0.5)+10, 540 * value, 25);
 		});
 
